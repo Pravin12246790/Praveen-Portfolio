@@ -243,24 +243,19 @@ cursor:pointer;
 }
   .piece[data-cat="hidden"]{ display:none; }
 
-  .piece-media{
-
-position:absolute;
-
-inset:0;
-
+ .piece-media{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
 }
 
-.piece-media img{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-transition:.4s;
-
+.piece-media img,
+.piece-media video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
 .piece:hover img{
