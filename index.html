@@ -702,8 +702,21 @@ function renderGallery() {
         
         card.innerHTML = `
             <div class="piece-media" data-cat="${work.category}">
-             <video controls muted loop playsinline width="640">
-               <source src="${work.src}" type="video/mp4">
+             <video
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  webkit-playsinline
+                  preload="auto"
+                  disablepictureinpicture
+                  controlslist="nodownload noplaybackrate"
+                  style="
+                      width:100%;
+                      height:100%;
+                      object-fit:cover;
+                      background:#000;">
+                  <source src="${work.src}" type="video/mp4">
               </video>
             </div>
         `;
